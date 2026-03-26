@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pocksy — Home</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand-wrap">
+          <img src="logo-small.png" alt="Pocksy logo" class="logo">
+        </div>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav" id="nav">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="cart.html" class="global-cart" aria-label="View cart">
+            <img src="cart.svg" alt="Cart" class="cart-icon">
+            <span id="cart-count">0</span>
+            <div class="cart-dropdown" aria-hidden="true">
+              <div class="cart-items">
+                <div class="empty">Your cart is empty</div>
+              </div>
+              <div class="cart-actions">
+                <a href="cart.html" class="btn">View cart</a>
+              </div>
+            </div>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <img src="logo.png" alt="Pocksy logo" class="hero-logo">
+          <h2>Attachable pockets</h2>
+          <p>Pocksy makes attachable pockets for anyone that needs pockets to store valuable items.</p>
+          <a href="#contact" class="btn">Get in touch</a>
+        </div>
+      </section>
+
+      <section id="services" class="container services">
+        <h3>Our Products!</h3>
+        <div class="cards">
+          <a class="card-link" href="black-pocket.html">
+            <article class="card">
+              <h4>Black pocket, that is attachable by magnets.</h4>
+              <p>--</p>
+            </article>
+          </a>
+          <a class="card-link" href="white-pocket.html">
+            <article class="card">
+              <h4>White pocket, that is attachable by magnets.</h4>
+              <p>--</p>
+            </article>
+          </a>
+          <a class="card-link" href="keychain.html">
+            <article class="card">
+              <h4>Customisable keychain to attach to your Pocksy.</h4>
+              <p>--</p>
+            </article>
+          </a>
+        </div>
+      </section>
+
+      <section id="about" class="container about">
+        <h3>About Us</h3>
+        <p>We are two students who have struggled with our favorite clothing not having pockets so that is why we made Pocksy. Pocksy is a handsown pocket with a hook on the side. We also sell mini keychanges that can be attached to our pockets. It is held onto your clothing but two magnets on each side of your clothing. It is sized to hold your phone or any other valuables. A cool feature is that in the pocket there is an emergency charger if your phone is about to die. If you are interested in an attachable pocket, shop with Pocksy today!
+</p>
+      </section>
+
+      <section id="contact" class="container contact">
+        <h3>Contact</h3>
+        <p class="contact-info">Email: <a href="mailto:LydiaPeters@shcs.school.nz">LydiaPeters@shcs.school.nz</a> • <a href="mailto:ElsieBarnett@shcs.school.nz">ElsieBarnett@shcs.school.nz</a></p>
+        <form onsubmit="event.preventDefault(); alert('Form submitted (demo)');">
+          <label>Name <input type="text" name="name" required></label>
+          <label>Email <input type="email" name="email" required></label>
+          <label>Message <textarea name="message" rows="4" required></textarea></label>
+          <button class="btn" type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>&copy; <span id="year"></span> Pocksy. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
