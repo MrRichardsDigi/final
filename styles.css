@@ -1,0 +1,81 @@
+:root{
+  --bg:#f7f9fb;
+  --accent:#e148a6;
+  --muted:#6b7280;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#111;margin:0;line-height:1.5}
+.container{max-width:1000px;margin:0 auto;padding:1rem}
+.site-header{background:#fff;box-shadow:0 1px 2px rgba(0,0,0,0.05);position:-webkit-sticky;position:sticky;top:0;z-index:1000;width:100%}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1rem;flex-wrap:wrap}
+.brand-wrap{display:flex;align-items:center;gap:.5rem;width:100%;justify-content:flex-start}
+.site-header .logo{height:56px;max-height:80px;width:auto;display:block;margin:0}
+.brand{margin:0;font-size:1.1rem;display:none}
+.nav a{margin-left:1rem;color:var(--muted);text-decoration:none}
+.nav-toggle{display:none;background:transparent;border:0;font-size:1.25rem}
+.hero{padding:4rem 0;text-align:center}
+.hero .hero-logo{display:block;margin:0 auto 1rem;height:64px;max-height:100px;width:auto;object-fit:contain}
+.hero h2{margin:0 0 0.5rem;font-size:2rem}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:0.6rem 1rem;border-radius:6px;text-decoration:none}
+.services{padding:2rem 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{background:var(--card);padding:1rem;border-radius:8px;box-shadow:0 1px 4px rgba(2,6,23,0.06)}
+.card-link{display:block;text-decoration:none;color:inherit}
+.card-link .card{transition:transform .12s ease,box-shadow .12s ease}
+.card-link .card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(2,6,23,0.08)}
+
+/* Ensure links wrapping cards do not show underlines */
+.card-link, .card-link *{text-decoration:none;color:inherit}
+.card-link:focus, .card-link:active, .card-link:hover{text-decoration:none}
+.card-link h4, .card-link p{margin:0;text-decoration:none}
+.about,.contact{padding:2rem 0}
+.contact form{display:grid;gap:.5rem;max-width:520px}
+.contact input,.contact textarea{width:100%;padding:.5rem;border:1px solid #e6e9ef;border-radius:6px}
+.site-footer{padding:1rem 0;text-align:center;color:var(--muted)}
+
+/* Fallback style used by JS when sticky doesn't behave as expected */
+.site-header.is-fixed{position:fixed;top:0;left:0;right:0;z-index:1000;box-shadow:0 4px 12px rgba(2,6,23,0.08)}
+
+/* Cart link badge */
+.cart-link{margin-left:1rem;display:inline-flex;align-items:center;gap:.4rem;text-decoration:none;color:inherit}
+.cart-link #cart-count{background:var(--accent);color:#fff;padding:0.15rem 0.45rem;border-radius:999px;font-weight:600;font-size:0.9rem}
+
+/* Fixed top-left global cart */
+.global-cart{display:inline-flex;align-items:center;gap:8px;background:transparent;padding:4px 6px;border-radius:8px;text-decoration:none;color:inherit}
+.global-cart .cart-icon{width:28px;height:28px;display:block}
+.global-cart #cart-count{background:var(--accent);color:#fff;padding:0.15rem 0.45rem;border-radius:999px;font-weight:600;font-size:0.9rem}
+
+/* dropdown preview */
+.global-cart{position:relative}
+.cart-dropdown{position:absolute;top:calc(100% + 8px);right:0;width:260px;background:#fff;border-radius:8px;padding:0.5rem;box-shadow:0 10px 30px rgba(2,6,23,0.12);display:none}
+.global-cart:hover .cart-dropdown,.global-cart.active .cart-dropdown{display:block}
+.cart-dropdown .cart-items{max-height:220px;overflow:auto;padding:0.25rem}
+.cart-dropdown .cart-item{display:flex;align-items:center;gap:8px;padding:0.4rem;border-radius:6px}
+.cart-dropdown .cart-item .thumb{width:48px;height:48px;flex:0 0 48px;border-radius:6px;object-fit:cover}
+.cart-dropdown .cart-item .meta{flex:1;display:flex;flex-direction:column}
+.cart-dropdown .cart-item .meta .name{font-size:0.95rem;margin-bottom:0.15rem}
+.cart-dropdown .cart-item .meta .price{color:var(--muted);font-size:0.9rem}
+.cart-dropdown .cart-item .qty{margin-left:0.5rem;font-weight:600}
+.cart-dropdown .empty{color:var(--muted);padding:0.5rem;text-align:center}
+.cart-controls{display:flex;align-items:center;gap:6px}
+.cart-controls button{background:#f1f5f9;border:1px solid #e6e9ef;padding:4px 8px;border-radius:6px;cursor:pointer}
+.cart-controls button:hover{background:#e6eef8}
+.cart-controls .remove{background:transparent;border:0;color:var(--muted);cursor:pointer;font-size:1rem}
+.cart-item .qty{font-weight:700;min-width:28px;text-align:center}
+.cart-dropdown .cart-actions{padding-top:0.5rem;text-align:center}
+
+/* bounce animation */
+@keyframes cart-bounce{0%{transform:translateY(0)}30%{transform:translateY(-10px)}60%{transform:translateY(0)}100%{transform:translateY(0)}}
+.global-cart.bounce{animation:cart-bounce 600ms cubic-bezier(.2,.8,.2,1)}
+
+/* Add-to-cart button spacing */
+.add-to-cart{margin-top:.5rem}
+
+@media(max-width:1000px){
+  .cards{grid-template-columns:1fr}
+  .nav{display:none}
+  .nav-toggle{display:block}
+  .logo{height:900px;max-height:1100px}
+  .hero .hero-logo{height: 500px;max-height: 530px}
+}

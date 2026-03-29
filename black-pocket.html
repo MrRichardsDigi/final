@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Black Pocket — Pocksy</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand-wrap">
+          <a href="index.html"><img src="logo-small.png" alt="Pocksy logo" class="logo"></a>
+        </div>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="cart.html" class="global-cart" aria-label="View cart">
+            <img src="cart.svg" alt="Cart" class="cart-icon">
+            <span id="cart-count">0</span>
+            <div class="cart-dropdown" aria-hidden="true">
+              <div class="cart-items">
+                <div class="empty">Your cart is empty</div>
+              </div>
+              <div class="cart-actions">
+                <a href="cart.html" class="btn">View cart</a>
+              </div>
+            </div>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Black Pocket</h1>
+      <p>Magnetic attachable pocket in black. Description: durable fabric, secure magnetic attachment, fits phone, keys, and small items.</p>
+      <p><strong>Price:</strong> $19.99 (demo)</p>
+      <p><button class="btn add-to-cart" data-sku="black-pocket">Add to cart</button></p>
+      <p><a href="index.html#services">Back to products</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>&copy; <span id="year"></span> Pocksy. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
